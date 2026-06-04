@@ -66,6 +66,10 @@ public class HeroKnight : MonoBehaviour {
             m_grounded = false;
             m_animator.SetBool("Grounded", m_grounded);
         }
+        if (Input.GetKeyDown(KeyCode.K))
+{
+    GetComponent<PlayerHealth>().TakeDamage(25);
+}
 
         // -- Handle input and movement --
         float inputX = Input.GetAxis("Horizontal");
